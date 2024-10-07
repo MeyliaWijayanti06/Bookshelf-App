@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(45deg, #2196f3, #64b5f6);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background: linear-gradient(145deg, #ffffff, #e0f7fa);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #00695c;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+form button {
+    background-color: #5fb9da ;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1872ab;
+}
+
+#incompleteBookList, #completeBookList {
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#incompleteBookList div,
+#completeBookList div {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+}
+
+#incompleteBookList h3,
+#completeBookList h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#incompleteBookList p,
+#completeBookList p {
+  margin-bottom: 0.5rem;
+}
+
+#incompleteBookList button,
+#completeBookList button {
+  background-color: #5fb9da;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#incompleteBookList button:hover,
+#completeBookList button:hover {
+  background-color: #1872ab;
+}
+
+#incompleteBookList button[data-testid="bookItemDeleteButton"],
+#completeBookList button[data-testid="bookItemDeleteButton"] {
+  background-color: #e53935; 
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#incompleteBookList button[data-testid="bookItemDeleteButton"]:hover,
+#completeBookList button[data-testid="bookItemDeleteButton"]:hover {
+  background-color: #b71c1c;
+}
+
+#incompleteBookList button[data-testid="bookItemIsCompleteButton"],
+#completeBookList button[data-testid="bookItemIsCompleteButton"] {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#incompleteBookList button[data-testid="bookItemIsCompleteButton"]:hover,
+#completeBookList button[data-testid="bookItemIsCompleteButton"]:hover {
+  background-color: #2e7d32; 
+}
+
+@media (max-width: 768px) {
+    #incompleteBookList div,
+    #completeBookList div {
+        width: 100%;
+    }
+}
+
